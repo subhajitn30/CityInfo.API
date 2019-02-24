@@ -10,8 +10,8 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  buildConfiguration: 'Release'
-  buildConfiguration: 'Test'
+  buildConfiguration: 'Release','Test'
+  
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
