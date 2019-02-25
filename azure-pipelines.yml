@@ -7,11 +7,11 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-16.04'  # Microsoft-hosted agents 
+  vmImage: 'Ubuntu-16.04'  
   
 - task: DotNetCoreInstaller@0
  inputs:
-  version: '2.1.300' #If you need a version of the .NET Core SDK 
+  version: '2.1.300' 
   
 - task: DotNetCoreCLI@2
   inputs:
