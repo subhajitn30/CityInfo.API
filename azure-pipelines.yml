@@ -23,13 +23,7 @@ pool:
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
     
-  inputs:
-    command: publish
-    publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: True
-    
- - task: PublishBuildArtifacts@1 #Package and deliver your code
+  
 
 variables:
   buildConfiguration: 'Release'
