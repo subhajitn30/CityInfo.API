@@ -11,7 +11,7 @@ pool:
   
 
   
-- task: DotNetCoreCLI@2
+- task: 
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
