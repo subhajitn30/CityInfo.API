@@ -5,12 +5,8 @@
 
 trigger:
 - master
-
 pool:
-  vmImage: 'Ubuntu-16.04'  
-  
-
-  
+  vmImage: 'Ubuntu-16.04'   
 - task: 
   inputs:
     command: test
@@ -20,13 +16,8 @@ pool:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
-    
-  
-
 variables:
   buildConfiguration: 'Release'
-  
-
 steps:
 - script: dotnet restore # Include additional options such as --configuration to meet your need
 - script: dotnet build --configuration $(buildConfiguration)
